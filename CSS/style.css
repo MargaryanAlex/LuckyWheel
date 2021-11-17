@@ -4,6 +4,11 @@
   color: white;
 }
 
+body {
+  min-height: 600px;
+  position: relative;
+}
+
 .spinCount {
   margin: 40px auto;
   width: 10%;
@@ -44,6 +49,7 @@
 
 .spinWheel .wheel {
   width: 100%;
+  height: 50%;
   position: relative;
 }
 
@@ -72,7 +78,7 @@
   left: 20%;
   margin: 0 auto;
   position: absolute;
-  bottom: 10%;
+  bottom: 10px;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -90,5 +96,58 @@
   padding: 10px;
   border-radius: 10px;
   background-color: rgba(153, 50, 204, 0.479);
+}
+
+@media screen and (max-width: 1200px) {
+  .spinWheel {
+    width: 100%;
+    min-width: 400px;
+  }
+  .spinCount p span {
+    font-size: 10px;
+  }
+  * {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .spinWheel {
+    width: 100%;
+    min-width: 300px;
+  }
+  .spinWheel img {
+    width: 50%;
+    left: 25%;
+  }
+  .spinWheel .spinCount p span {
+    font-size: 10px;
+  }
+  .spinWheel * {
+    font-size: 12px;
+  }
+  .prizebox {
+    gap: 5px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .spinWheel {
+    width: 100%;
+    min-width: 200px;
+  }
+  .spinWheel img {
+    width: 50%;
+    left: 25%;
+  }
+  .spinWheel .spinCount p span {
+    font-size: 10px;
+  }
+  .spinWheel * {
+    font-size: 12px;
+  }
+  .prizebox {
+    gap: 5px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
