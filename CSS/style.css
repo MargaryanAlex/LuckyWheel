@@ -164,4 +164,29 @@ footer a {
     gap: 5px;
   }
 }
+
+@media screen and (max-width: 250px) {
+  .spinWheel {
+    width: 100%;
+    min-width: 50px;
+  }
+  .spinWheel img {
+    width: 50%;
+    left: 25%;
+  }
+  .spinWheel .spinCount p span {
+    font-size: 3px;
+  }
+  .spinWheel * {
+    font-size: 5px;
+  }
+  .spinWheel #point {
+    top: 0;
+  }
+  .prizebox {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 5px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

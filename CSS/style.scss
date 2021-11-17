@@ -188,3 +188,35 @@ footer {
         gap: 5px;
     }
 }
+@media screen and (max-width: 250px) {
+    .spinWheel {
+        width: 100%;
+        min-width: 50px;
+
+        img {
+            width: 50%;
+            left: 25%;
+        }
+        .spinCount {
+            p {
+                span {
+                    font-size: 3px;
+                }
+            }
+        }
+
+        * {
+            font-size: 5px;
+        }
+        #point {
+            top: 0;
+        }
+    }
+    
+
+
+    .prizebox {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+}
