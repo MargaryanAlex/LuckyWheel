@@ -35,12 +35,14 @@ function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 };
 
+var locked = false;
 spin.addEventListener('click', () => {
+    if(locked) return;
+    locked = true;
     freeSpin >= 0 ? rotate() : "";
     setTimeout(function () {
-        return prizeBox.append(prizeElement);
+        prizeBox.append(prizeElement);
+        locked = false;
     }, 2000);
-
-
 });
 spincount.innerHTML = freeSpin--;
