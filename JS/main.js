@@ -3,6 +3,7 @@ const wheel = document.getElementById('wheel');
 const prizeBox = document.getElementById('prizebox');
 let spincount = document.getElementById('spincount');
 console.log(spincount);
+let value;
 let step = 0;
 let freeSpin = 5;
 const prizeArr = [
@@ -18,6 +19,7 @@ const prizeArr = [
 let stepAngle = 360 / prizeArr.length;
 
 function rotate() {
+    var loced = false
     let currentStep = getRandomNumber(0, prizeArr.length);
     let currentAngle = currentStep * stepAngle
     console.log(currentAngle);
@@ -34,11 +36,15 @@ function getRandomNumber(min, max) {
         return Math.floor(Math.random() * (min));
     return Math.floor(Math.random() * (max - min) + min);
 };
-
+var locked = false;
 spin.addEventListener('click', () => {
+    if(locked) return;
+    locked = true;
     freeSpin >= 0 ? rotate() : "";
     setTimeout(function () {
-        return prizeBox.append(prizeElement);
+        prizeBox.append(prizeElement);
+        locked = false;
+
     }, 2000);
 
 
